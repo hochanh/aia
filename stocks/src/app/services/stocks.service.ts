@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 const stocks: Array<string> = ['AAPL', 'GOOG', 'FB', 'AMZN', 'TWTR'];
-const service = 'http://localhost';
+const service = 'http://localhost:3000';
 
 export interface StockInterface {
   symbol: string;

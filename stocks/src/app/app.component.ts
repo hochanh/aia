@@ -8,6 +8,7 @@ import { StocksService, StockInterface } from './services/stocks.service';
 })
 export class AppComponent {
   stocks: Array<StockInterface>;
+
   constructor(service: StocksService) {
     service.load(['APPL']).subscribe(stocks => {
       this.stocks = stocks;

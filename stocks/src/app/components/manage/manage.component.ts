@@ -15,7 +15,9 @@ export class ManageComponent {
   }
 
   add() {
-    this.symbols.push(this.stock.toUpperCase());
+    let stock = this.stock.toUpperCase();
+    this.service.add(stock);
+    this.symbols.push(stock);
     this.stock = '';
   }
 

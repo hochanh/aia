@@ -14,13 +14,14 @@ export interface StockInterface {
 @Injectable()
 export class StocksService {
   constructor(private http: HttpClient) {}
+
   get() {
     return stocks.slice();
   }
 
   add(stock) {
     stocks.push(stock);
-    this.get();
+    return this.get();
   }
 
   remove(stock) {

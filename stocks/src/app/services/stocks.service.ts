@@ -23,6 +23,11 @@ export class StocksService {
     this.get();
   }
 
+  remove(stock) {
+    stocks.splice(stocks.indexOf(stock), 1);
+    return this.get();
+  }
+
   load(symbols) {
     if (symbols) {
       return this.http.get<Array<StockInterface>>(service + '/stocks/snapshot/?symbols=' + symbols.join());
